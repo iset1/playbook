@@ -1,0 +1,8 @@
+---
+- hosts: all
+  sudo: true
+    tasks:
+    - name: update
+      command: apt-get update
+    - name: Installs docker
+      apt: pkg=docker.io
