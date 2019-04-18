@@ -1,7 +1,5 @@
----
 - name: Hello World
   hosts: all
-  sudo: true
   tasks:
     - name: Hello Message
       debug:
