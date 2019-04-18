@@ -1,9 +1,7 @@
 ---
-- hosts: all
-  become: true
-  sudo: true
-    tasks:
-    - name: update
-      command: apt-get update
-    - name: Installs docker
-      apt: pkg=docker.io
+- name: Hello World Sample
+  hosts: all
+  tasks:
+    - name: Hello Message
+      debug:
+        msg: "Hello World!"
