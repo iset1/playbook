@@ -1,6 +1,14 @@
-- name: Hello World
-  hosts: all
+---
+
+- hosts: all
+  sudo: true
+  
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
+    - name: update
+      command: apt-get update
+      
+
+    - name: Installs docker
+      apt: pkg=docker.io
+      
+
